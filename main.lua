@@ -12,10 +12,13 @@ end
 
 function love.draw()
   love.graphics.setNewFont("res/fonts/still time.ttf", 128)
+  love.graphics.setLineWidth(7)
   local font = love.graphics.getFont()
   local font_width = font:getWidth("Hello World")
   local font_height = font:getHeight("Hello World")
 
   love.graphics.setColor(150, 0, 0, 255)
   love.graphics.print("Hello World", window_width / 2 - font_width / 2, window_height / 2 - font_height / 2)
+
+  love.graphics.rectangle("line", 0, 0, window_width, window_height)
 end
